@@ -1,4 +1,5 @@
-/* Déclaration des polices personnalisés a utiliser dans le site web */
+
+ /* Déclaration des polices personnalisés a utiliser dans le site web */
 
 @font-face {
     font-family: 'ballparkweiner';
@@ -57,4 +58,18 @@ header .logo_zozor .zozor {
 
 .logo_zozor img {
     margin-bottom: 15px;
+}
+
+#logo{
+
+}
+
+.tweet{
+    background-color: #000;
+    color: #634;
+}
+
+.mes_phot{
+    background-color: #987;
+    color: #181818;
 }
