@@ -186,7 +186,28 @@ l'ordre de définitions du reste des polices importe peu, mais il serait mieux d
 ```
 
 #===================================================================================================================#
-													@font-face
+													@import
 #===================================================================================================================#
 
+La commande @import est utiliser pour inclure du css dans du code css, c'est a dire importer un fichier css existant dans
+un autre fichier css qu'on est entrain de créer.
 
+```css
+@import url(more.css);
+@import url(andmore.css);
+
+a {
+    color: black;
+}
+```
+
+ce code permet d'importer deux nouveau fichier css au début des anciens.
+
+cette rêgle est utilisé pour agancer plusieurs css ensemble avant de les faires télécharger par le naviguateur ou
+est utiliser pour le téléchargement en parallèle d'un autre fichier css pendant la lecture de celui en cour.
+mais il faut noter qu'a la rencontre de ce code, le naviguateur stop la lecture du code en cours et ne la reprend que lorsqu'il aura finis l'importation de celle spécifier dans import.
+elle peut donc servir si on veut faire apparaitres des rêgles css dans un certains ordre et par prioriter.
+
+#===================================================================================================================#
+                                                    @import
+#===================================================================================================================#
