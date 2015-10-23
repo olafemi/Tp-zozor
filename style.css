@@ -1,4 +1,3 @@
-
  /* Déclaration des polices personnalisés a utiliser dans le site web */
 
 @font-face {
@@ -11,7 +10,6 @@
          url('polices/ballpark-webfont.svg#ballparkweiner') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -23,53 +21,236 @@
          url('polices/dayrom.svg#dayrom') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-/* Règle général du doccument */
 
+/* Rêgle général du site */
 body {
-    background: url('images/fond_jaune.png');
-    font-size: 1em;
-    font-family: 'Trebuchet MS', arial, sans-serif;
-    color: #181818;
-    width: 960px;
-    margin: auto;
+    background-image: url('images/fond_jaune.png');
+    font-family: 'Trebuchet Ms', arial, sans-serif,; ;
+    font-size: 1em ;
+    color: #181818 ;
+    }
+
+.bloc_page {
+    width:952px ;
+    margin: auto ; 
 }
 
-section h1, footer h1, nav a{
-    font-family: Dayrom, serif;
+h1, nav a {
+    font-family: 'dayrom',serif;
     font-weight: normal;
     text-transform: uppercase;
-}
-
+} 
 
 /* Header */
 
-header .logo_zozor .zozor {
+.separateur {
+    background: url('images/separateur.png') repeat-x bottom;
+}
+
+header, .titre_principal, .logo_z, .Zozor, nav {
     display: inline-block;
 }
 
-.zozor {
-    font-family: "ballparkweiner", verdana, "comic ms";
+.logo_z, .Zozor{
+    margin-bottom: 0;
+}
+
+.Zozor {
+    font-family: 'ballparkweiner', serif;
+    font-weight: normal;
     font-size: 2.5em;
-    font-weight: bold;
-    margin-left: 5px;
+    text-transform: none;
+    display: inline-block;
+}
+.carnet_de_voyage {
+    font-family: 'dayrom', 'Trebuchet Ms' sans-serif;
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-top: 0;
+
 }
 
-.logo_zozor img {
-    margin-bottom: 15px;
+nav {
+    text-align: right;
+    width: 740px;
 }
 
-#logo{
-
+nav ul {
+    list-style-type: none;
 }
 
-.tweet{
-    background-color: #000;
-    color: #634;
-}
-
-.mes_phot{
-    background-color: #987;
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+    font-family: 'dayrom';
+    font-size: 1.3em;
     color: #181818;
 }
+
+nav a {
+        text-decoration: none;
+        color: #181818
+}
+
+nav a:hover { 
+    color: #760001 ;
+    border-bottom: 3px solid #760001;
+}
+
+/* fin du header */
+
+/* Bannière images */
+
+.banniere_immages{
+    background: url('images/sanfrancisco.jpg') no-repeat;
+    position: relative;
+    width: 900px;
+    height: 219px;
+    border-radius: 10px;
+    box-shadow: 0 6px 6px #1c1a19;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.banniere_description {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    width: 99.5%;
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: rgb(24,24,24);
+    background-color: rgba(24,24,24,0.8);
+    color: white;
+    font-size: 0.8em;
+}
+
+.Bouton_rouge {
+    display: inline-block;
+    height: 25px;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    background: url('images/fond_degraderouge.png') repeat-x;
+    border: 1px solid #76001;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 6px 0 6px;
+    color: white;
+    text-decoration: none;
+}
+
+.bouton_rouge img {
+    border: 0;
+
+}
+/* fin banière images */
+
+/* Début du centre section et aside */
+
+section {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 900px;
+}
+
+article {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 620px;
+    margin: 0; 
+    padding: 0;
+    text-align: Justify;
+    vertical-align: top;
+}
+
+aside {
+    box-sizing: border-box;
+    width: 260px;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #1c1a19;
+    display: inline-block;
+    color: white;
+    font-size: 0.9em; 
+    text-align: justify;
+    vertical-align: top;
+    background-color: #706b64;
+}
+
+.apropos {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.fleche {
+    position: relative;
+    right: 22px;
+    top: 45px;
+}
+
+.cont_photozozor{
+    text-align: center;
+    margin-top: 0;
+}
+
+.photo_zozor {
+    border: solid black 1px;
+}
+
+/* Fin de la section centrale contenant les aside et article */
+
+/* Début du footer */
+
+.tweet, .mes_photos, .mes_amis {  
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mes_amis {
+    list-style-image: url('images/ico_liensexterne.png');
+    width: 31%;
+}
+
+.mes_amis ul {
+    display: inline-block;
+    margin-top: 0;
+    width: 48%;
+    padding-left: 2px;
+}
+
+.tweet {
+    width: 28%;
+}
+
+.mes_photos {
+    width: 35%;
+}
+
+.h1{
+    font-size: 1.1em;
+}
+
+footer .mes_amis a {
+    color: #760001;
+    text-decoration: none;
+}
+
+footer p, footer ul {
+    font-size: 0.8em;
+}
+footer {
+    padding-top: 20px;
+    background: url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top;
+}
+
+.lesphotosdevac {
+    border: 1px solid #181818;
+    margin-right: 2px;
+}
+
+/* Fin du footer */

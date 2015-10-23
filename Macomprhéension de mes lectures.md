@@ -300,7 +300,7 @@ ici il faut noté l'espace entre ".foo" et ".bar"
 
 
 #===================================================================================================================#
-                                                    Adjoining classes
+                                        Disallow duplicate background images
 #===================================================================================================================#
 
 Csslint veut pour vous que votre site sois le plus léger possible.
@@ -377,5 +377,106 @@ The following patterns are considered okay and do not cause warnings:
 
 
 #===================================================================================================================#
-                                                    Adjoining classes
+                                            Disallow duplicate propertie
 #===================================================================================================================#
+
+L'utilisation des propriétés dupliqués, au début du dévelloppement web étais perçu comme une erreur. 
+
+```css
+.mybox {
+    width: 100px;
+    width: 120px;
+}
+```
+Ceci peut être clairement peru comme une erreur
+
+Toute fois, cet usage est de plus en plus considérer comme un moyens de gérer les différents navigateurs ne supportant pas certaines fonction du css. pour exemple certains naviguateur supporte la propriété rgba tandis que d'autre non, ainsi pour gérer ce cas de figure on utilise deux fois la même propriété 
+
+```css
+.mybox {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+}
+```
+ainsi on définit la propriété pour un navigateur supportant le rgba et au cas où le navigateur ne la supporterais pas on définit une couleur supporté par le naviguateur.
+
+## Rule Details
+    
+Rule ID: `duplicate-properties`
+
+cette rêgle est utilisé pour trouver un quelconque duplication de propriété dans le css
+ elle s'active lorsque :
+ - Une proprité est entrer doublement et contient les mêmes valeurs 
+
+/* properties with the same value */
+.mybox {
+    border: 1px solid black;
+    border: 1px solid black;
+}
+
+ - Une propriété est entrer doublement et est séparer par au moins une autre propriété
+
+ /* properties separated by another property */
+.mybox {
+    border: 1px solid black;
+    color: green;
+    border: 1px solid red;
+}
+
+The following patterns are considered okay and do not cause a warning:
+
+```css
+
+/* one after another with different values */
+.mybox {
+    border: 1px solid black;
+    border: 1px solid red;
+}
+```
+
+#===================================================================================================================#
+                                            Disallow epty rules 
+#===================================================================================================================#
+cette allerte est générer lorsque sublime linter ne détecte aucune propriété dans un élément désigner a stylisé
+
+```css
+.foo {
+}
+```
+    
+cette rêgle permet d'enlever les kilo octet unitile de votre css en supprimant les ligne inutile comme les rêgle unitile
+
+Cette rêgle avertis donc quand il existe une réglage vide dans le css
+
+
+```css
+.mybox { }
+
+.mybox {
+
+}
+
+.mybox {
+    /* a comment */
+}
+```
+
+
+#===================================================================================================================#
+                                            disallow IDs in selectors
+#===================================================================================================================# 
+Cette rêgle a été créer pour créer une allerte, un avertissements lors de l'utilisation d'un id dans le css
+quelque soit où il est utilisé
+
+
+```css
+#mybox {
+    display: block;
+}
+
+.mybox #go {
+    color: red;
+}
+```
+ cette rêgle existe dans le but de permettre au utilisateurs de css lint d'avoir un css maintenable
+ 

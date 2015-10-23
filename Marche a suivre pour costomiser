@@ -1,0 +1,34 @@
+Marche a suivre pour costomiser les sites
+
+Déclarer les polices personnalisées
+
+ @font-face {
+ 	font-family /*pour le nom de la police et*/ 
+ 	src : url (/* pour définir le dossier ou ce trouve la police */)
+
+ 	"il faut aussi retenir que il peut y avoir dautre cgose a utiliser comme"
+
+ 	url('MaSuperPolice.eot') format('eot'),
+ 	url('MaSuperPolice.woff') format('woff'),
+	url('MaSuperPolice.ttf') format('truetype'),
+	url('MaSuperPolice.svg') format('svg');
+	/* ici on utilise url pour localiser chaque type de font-face comme le font-face a utiliser dépend d navigateur
+	le format indique le format du font. */
+ }
+
+Pour les rêgles général
+
+je prend le body 
+
+je lui fixe une taille une largeur je veux dire avec width dans le genre 960 px de diamètre
+
+Maintenant je centre le tout avec margin : auto; pour que quelque soit l'écran mon body puisse faire 960px mais qu'il soit centrer.
+
+je définis le background général du site
+
+je définis la polices général ou dominante du site x taille et x couleur.
+
+mettre en majuscule upercase
+
+je définis la police général des h1
+
