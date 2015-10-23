@@ -213,7 +213,7 @@ aside {
 
 .mes_amis {
     list-style-image: url('images/ico_liensexterne.png');
-    width: 31%;
+    width: 29%;
 }
 
 .mes_amis ul {
@@ -245,7 +245,13 @@ footer p, footer ul {
 }
 footer {
     padding-top: 20px;
-    background: url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top;
+    background: url('images/separateur.png') repeat-x top;
+}
+
+.ancre {
+    position: relative;
+    top: -20px;
+    right: -450px;
 }
 
 .lesphotosdevac {
