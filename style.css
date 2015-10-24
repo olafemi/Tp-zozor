@@ -36,6 +36,30 @@ body {
     margin: auto ; 
 }
 
+@media all and (max-width: 1040px) {
+    .bloc_page {
+        width: auto;
+    }
+
+    nav {
+        width: auto;
+        text-align: left;
+    }
+
+    nav li {
+        display: block;
+        padding-left: 4px;
+    }
+
+    nav a {
+        font-size: 1.1em;
+    }
+
+    nav a :hover {
+        border-bottom: 0;
+    }
+}
+
 h1, nav a {
     font-family: 'dayrom',serif;
     font-weight: normal;
